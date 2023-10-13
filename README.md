@@ -32,6 +32,7 @@ libudev-dev python3-setuptools build-essential liborc-0.4-0 liborc-0.4-dev \
 python3-gi-cairo libeigen3-dev libsndfile1-dev xterm
 ```
 
+## Build uhd
 ```bash
 cd
 git clone https://github.com/EttusResearch/uhd.git
@@ -44,7 +45,9 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr ../ -DENABLE_C_API=ON -DENABLE_PYTHON_API=ON
 make -j6
 make test
 sudo make install
+```
 
+```bash
 sudo ldconfig
 sudo uhd_images_downloader
 cd ~/uhd/host/utils
@@ -53,14 +56,12 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-
 # restart terminal
 ```bash
 uhd_usrp_probe
 ```
 
-
-
+## Build volk
 ```bash
 cd
 git clone --recursive https://github.com/gnuradio/volk.git
