@@ -40,7 +40,7 @@ git checkout v4.1.0.4 #checkout wanted version
 cd host
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local ../ -DENABLE_C_API=ON -DENABLE_PYTHON_API=ON
+cmake -DCMAKE_INSTALL_PREFIX=/usr ../ -DENABLE_C_API=ON -DENABLE_PYTHON_API=ON
 make -j6
 make test
 sudo make install
@@ -72,6 +72,7 @@ make -j6
 make test
 sudo make install
 sudo ldconfig
+```
 
 ```bash
 python3 -m pip install pytest numpy scipy
