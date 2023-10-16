@@ -74,7 +74,8 @@ make test
 sudo make install
 sudo ldconfig
 ```
-
+## Install pybind11
+### Build from source
 ```bash
 python3 -m pip install pytest numpy scipy
 git clone https://github.com/pybind/pybind11.git
@@ -85,6 +86,11 @@ cd build
 cmake ..
 sudo make install
 cd ..
+```
+### Can also install with `pip`
+```
+python3 -m pip install pytest numpy scipy
+python3 -m pip install pybind11
 ```
 
 
