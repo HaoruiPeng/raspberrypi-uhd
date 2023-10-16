@@ -56,7 +56,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-# restart terminal
+## restart terminal and check if uhd has installed successfully
 ```bash
 uhd_usrp_probe
 ```
@@ -93,7 +93,8 @@ python3 -m pip install pytest numpy scipy
 python3 -m pip install pybind11
 ```
 
-
+## Install GNURadio
+### Build from source
 ```bash
 cd
 git clone https://github.com/gnuradio/gnuradio.git
@@ -107,17 +108,19 @@ make test
 sudo make install
 sudo ldconfig
 ```
+### Can also use package manager `apt-get`
+```
+sudo apt-get install gnuradio
+```
 
-
-
-# add to $HOME/.bashrc (only for CLI):
+### add to $HOME/.bashrc (only for CLI):
 ```bash
-export LD_LIBRARY_PATH=/usr/local/lib
-export PYTHONPATH=/usr/local/lib/python3/dist-packages
+export PATH="/home/pi/.local/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/lib"
+export PYTHONPATH="/usr/local/lib/python3/dist-packages"
 
 source ~/.bashrc
 ```
-
 
 
 # OLD way
